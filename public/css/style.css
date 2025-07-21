@@ -1,0 +1,209 @@
+body {
+  padding-top: 0px; /* supaya konten tidak tertutup navbar */
+  background-color:#d3d3d3;
+}
+
+.full-height {
+  height: 100vh; /* Tinggi penuh satu layar */
+}
+
+/* Atur font khusus untuk seluruh daftar nav */
+.navbar-nav {
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+}
+
+/* Atur gaya tiap item (opsional) */
+.navbar-nav .nav-item {
+  margin-left: 15px; /* jarak antar item */
+}
+
+/* Link dalam item */
+.navbar-nav .nav-link {
+  font-weight: 500;
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #555;
+}
+
+.navbar-brand {
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  color: #000;
+}
+
+.div-row{
+  background-color:#d3d3d3;
+}
+
+.warna{
+  background-color:#d3d3d3;
+}
+
+.custom-container {
+  max-width: 1200vh; /* atau width: 100%; untuk full lebar */
+  height: 500px;     /* atur tinggi sesuai desain */
+  margin: 0 auto;    /* agar center secara horizontal jika pakai max-width */
+  background-color:#d3d3d3;
+}
+
+.custom-text {
+  font-family: 'Inter', sans-serif; /* jenis font */
+  font-size: 250px; 
+  letter-spacing: -2.816px;
+  line-height: 230.4px; 
+  text-decoration: none solid rgb(21, 21, 23);   
+  word-spacing: 0px;             /* ukuran font */
+  color: #000;                     /* warna teks opsional */
+}
+
+.custom-text-dua {
+  font-family: 'Inter', sans-serif; /* jenis font */
+  font-size: 21px;
+  line-height: 27px; 
+  text-decoration: none solid rgb(21, 21, 23);   
+  word-spacing: 0px;             /* ukuran font */
+  color: #000;                     /* warna teks opsional */
+}
+
+.custom-text-tiga {
+  font-family: 'Inter', sans-serif; /* jenis font */
+  font-size: 6px;
+  line-height: 39px; 
+  text-decoration: none solid rgb(21, 21, 23);   
+  word-spacing: 0px;             /* ukuran font */
+  color: #000;   
+  text-align: justify;                  /* warna teks opsional */
+}
+
+.custom-text-empat {
+  font-family: 'Inter', sans-serif; /* jenis font */
+  font-size: 65px;
+  line-height: 39px; 
+  text-decoration: none solid rgb(21, 21, 23);   
+  word-spacing: 0px;             /* ukuran font */
+  color: #000;   
+  text-align: justify;                  /* warna teks opsional */
+}
+
+.custom-text-lima {
+  font-family: 'Inter', sans-serif; /* jenis font */
+  font-size: 65px;
+  line-height: 39px; 
+  text-decoration: none solid rgb(21, 21, 23);   
+  word-spacing: 0px;             /* ukuran font */
+  color: #000;   
+  text-align: justify;                  /* warna teks opsional */
+}
+
+.my-card {
+  background-color: transparent;       /* warna latar belakang */
+  border: 0px;       /* border tipis abu */
+  border-radius: 8px;           /* sudut membulat */
+  padding: 20px;                /* ruang dalam */
+  max-width: 350px;             /* lebar maksimal */
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: start;
+}
+
+.my-card-title {
+  font-size: 3rem;
+  margin-bottom: 10px;
+  color: #555;
+  font-family: inter, sans-serif;
+  text-align: start;
+}
+
+.my-card-text {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.my-card-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;   /* warna tombol */
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.my-card-btn:hover {
+  background-color: #0056b3;
+}
+
+.table td, table tr {
+  height: 100px; /* tinggi baris */
+  vertical-align: middle; /* posisi teks di tengah */
+  text-align: start;
+  padding-left: 30px;
+  border: 1px solid #000000 !important; /* biru Bootstrap */
+  border-left: none !important;
+  border-right: none !important;
+  border-top: none !important;
+  border-bottom: 1px solid #000000; /* warna dan ketebalan garis bawah */
+  text-decoration: none !important;
+}
+
+/* Tambahkan di bawah ini */
+.table tr:hover {
+  background-color: #232121;
+}
+
+/* Karena kolom nomor urut dihapus, atur kolom dari 1 */
+.table td:nth-child(1) {
+  font-size: 50px; /* Nama Proyek */
+  font-weight: 500;
+  letter-spacing: -1px;
+  line-height: 46px;
+  font-family: Helvetica, sans-serif;
+  word-spacing: 0px;
+  text-decoration: none !important;
+}
+.table td:nth-child(2) {
+  font-size: 17px; /* Kategori */
+  font-weight: 300;
+  line-height: 28px;
+  text-align: left;
+  word-spacing: 0px;
+  font-family: Helvetica, sans-serif;
+  padding-right: 60px;
+  padding-left: 30px;
+}
+.table td:nth-child(3) {
+  font-size: 12px; /* Status */
+  color: gray;
+}
+
+.fixed-btn {
+  font-size: 16px;
+  padding: 10px 25px;
+  color: #000;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  border-top-left-radius: 48px;
+  border-top-right-radius: 48px;
+  border-bottom-left-radius: 48px;
+  border-bottom-right-radius: 48px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.fixed-btn:hover {
+  background-color: #54575a; /* warna saat di-hover */
+}
+
+
+.text-body-secondary{
+  color: #000;
+}
+
+.border-top{
+  color: #000;
+}

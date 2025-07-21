@@ -1,0 +1,690 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg, #000000);
+    color: var(--text, #f5f5f5);
+    transition: background-color 0.3s, color 0.3s;
+    font-family: "Neue Montreal Mono", Consolas, monospace;
+    height: auto; /* biarkan konten menentukan tinggi halaman */
+    min-height: 100vh; /* pastikan minimal setinggi viewport */
+    box-sizing: border-box;
+    overflow-x: hidden; /* cegah scroll horizontal */
+    height: 100vh;
+    text-transform: none;
+}
+
+/* Scrollbar disembunyikan tetap aman di semua browser */
+html, body {
+    scrollbar-width: none;        /* Firefox */
+    -ms-overflow-style: none;     /* IE & Edge */
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none;                /* Chrome, Safari, Opera */
+}
+
+.full-box {
+    position: fixed; /* Lebih aman daripada absolute di responsive */
+    width: calc(100% - 70px - 45px); /* menghitung sisa space dari kiri & kanan */
+    margin: 45px 45px 60px 70px; /* top right bottom left */
+    border: 0.5px solid var(--text);
+    background-color: var(--bg);
+    color: var(--text);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    .full-box {
+        margin: 20px; /* kasih margin lebih kecil di mobile */
+        width: calc(100% - 40px);
+        border-width: 0.5px;
+    }
+}
+
+.butondark {
+    position: absolute;
+    top: 45px;
+    bottom: 60px;
+    left: 0px;
+    width: 68px;
+    z-index: 999;
+    background-color: red;
+    text-align: end;
+    justify-content: flex-end;
+}
+
+.butondark .theme-toggle-btn{
+    left: auto;
+}
+
+.container-home {
+    display: flex;
+    flex: 1; /* Mengisi seluruh ruang dalam .full-box */
+    height: 88.7vh;
+}
+
+.left {
+    /* width: 88%; */
+    background-color: transparent;
+    padding: 20px;
+
+    /* font-family: 'Crafter Dreams', sans-serif; */
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 55px;
+    font-weight: 100;
+    letter-spacing: 2px;
+    line-height: 60px;
+    text-decoration: none solid rgb(255, 255, 255);
+    white-space: nowrap;
+    word-spacing: 0px;
+    margin-top: 30px;
+    margin-left: 30px;
+}
+
+.leftdua {
+    font-family: 'Neue Montreal Mono', monospace;
+    font-size: 10px;
+    font-weight: 100;
+    letter-spacing: -1px;
+    line-height: 30px;
+    white-space: nowrap;
+    word-spacing: 0px;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 768px) {
+    .left {
+        font-size: 36px;
+        line-height: 40px;
+        white-space: nowrap;
+        text-align: left;
+        padding: 10px 15px;
+        font-weight: 100;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    .leftdua {
+        font-size: 9px;
+        line-height: 20px;
+        letter-spacing: -0.5px;
+        text-align: left;
+        white-space: normal;
+    }
+}
+
+.right {
+    height: 100%;
+    background-color: transparent;
+    padding: 20px;
+    text-align: start;
+    padding-top: 150px;
+    padding-right: 0px;
+
+    font-family: 'Neue Montreal Mono', monospace;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ini membuat konten turun ke bawah */
+
+    font-size: 12px;
+    margin-top: 30px;
+    margin-left: auto;
+}
+
+/* Responsif untuk layar kecil */
+@media (max-width: 768px) {
+    .right {
+        width: 100%;
+        padding: 20px 15px;
+        padding-top: 50px;
+        text-align: left;
+        font-size: 11px;
+        margin-left: -200px;
+        margin-top: 20px;
+    }
+}
+
+.right-baru {
+    width: 20%;
+    max-width: 100%;
+    background-color: transparent;
+    padding: 20px;
+    text-align: start;
+    margin-left: auto;
+
+
+    font-family: 'Neue Montreal Mono', monospace;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    font-size: 12px;
+    line-height: 18px;
+}
+
+/* Responsif untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+    .right-baru {
+        width: 100%;               /* ambil seluruh lebar */
+        max-width: 100%;            /* biar tidak mentok kanan */
+        margin-left: -20%;         /* sedikit geser ke kiri */
+        margin-right: auto;        /* dorong dari kanan */
+
+        padding: 10px 30px;
+        font-size: 11px;
+        line-height: 16px;
+
+        text-align: left;
+        align-items: flex-start;
+        margin-top: 10px;
+
+        /* Hapus transform */
+    }
+}
+
+@media (max-width: 430px) {
+    .right-baru {
+        font-size: 11px;
+        padding: 10px 16px;
+    }
+}
+
+.custom-navbar .navbar-brand {
+    margin-bottom: 8px; /* atau 2px jika ingin lebih rapat */
+    padding-top: 2px;
+    padding-bottom: 2px;
+
+    font-family: 'Neue Montreal Mono', monospace;
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 12px;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: left;
+    white-space: nowrap;
+    word-spacing: 0px;
+    letter-spacing: 0.1px;
+
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Contoh styling link di navbar */
+.custom-navbar .navbar-brand a {
+    color: var(--nav-text);
+}
+
+/* Light mode (default) */
+.custom-navbar .navbar-brand {
+    color: #000000 !important;
+}
+
+  /* Dark mode */
+.dark .custom-navbar .navbar-brand {
+    color: #ffffff !important;
+}
+
+  /* Link di navbar */
+.custom-navbar .navbar-brand a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.dark .custom-navbar .navbar-brand a {
+    color: inherit;
+}
+
+.right-project {
+    min-height: 100vh;
+    width: 100%;
+    background-color: transparent;
+    text-align: end;
+
+    font-family: 'Neue Montreal Mono', monospace;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Ini membuat konten turun ke bawah */
+
+    font-size: 12px;
+    padding-right: 28px;
+}
+
+.right-project .overflow-auto {
+    padding: 150px 2px 20px 20px; /* top, right, bottom, left */
+}
+
+.right-project::-webkit-scrollbar {
+    display: none;
+}
+
+.custom-judul {
+    /* font-family: 'Crafter Dreams', sans-serif; */
+    font-family: 'Helvetica Neue', sans-serif;
+    /* font-family: 'Bw Modelica SS02', sans-serif; */
+    letter-spacing: 2px;
+    font-size: 50px;
+    font-weight: 100;
+    line-height: 60px;
+    text-decoration: none solid rgb(255, 255, 255);
+    text-align: end;
+    white-space: nowrap;
+    word-spacing: 0px;
+}
+
+@media (max-width: 768px) {
+    .right-project {
+        width: 100%;               /* isi layar penuh */
+        text-align: end;
+        font-size: 11px;
+        position: relative;
+        margin-left: -210px;
+        padding-right: auto;
+    }
+
+    .custom-judul {
+        width: 100%;
+        font-size: 19px;           /* perkecil agar muat di layar kecil */
+        line-height: 40px;
+        text-align: end;          /* ubah dari right ke left untuk mobile */
+        white-space: normal;
+        white-space: nowrap;
+        padding-right: auto;
+    }
+}
+
+
+body::-webkit-scrollbar,
+html::-webkit-scrollbar {
+    display: none;
+}
+
+.main-layout {
+    display: flex;
+    width: 100%;
+    margin-right: 0;
+    max-width: 100%;
+}
+
+  /* Kiri full */
+.left-panel {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    margin-left: auto; /* ini akan mendorong elemen ke kanan */
+    margin-right: 300px;
+}
+
+.left-panel a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Neue Montreal Mono', monospace;
+    font-size: 9px;
+    text-transform: lowercase;
+    transition: color 0.3s ease;
+    color: var(--text); /* Gunakan variabel, bukan warna tetap */
+}
+
+.left-panel a:hover {
+    color: gray;
+    color: var(--hover);
+}
+
+@media (max-width: 768px) {
+    .main-layout {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 80px;
+        margin-left: -400px;
+        margin-top: 200px;
+    }
+}
+
+.right-info {
+    background-color: transparent; /* Bisa diganti var(--bg) jika pakai dark mode */
+    padding: 20px 0 20px 20px;      /* Top & bottom 20px, right 0, left 20px */
+    margin-left: auto;
+
+    text-align: start;
+    font-family: 'Neue Montreal Mono', monospace;
+    font-size: 9px;
+    line-height: 1.6;               /* Lebih konsisten daripada px */
+    
+    display: flex;
+    flex-direction: column;        /* Supaya child tersusun vertikal */
+
+    color: var(--text) !important;            /* Gunakan variable jika pakai dark mode */
+}
+
+.container-split {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Neue Montreal Mono', monospace;
+    font-weight: 100;
+    font-size: 9px;
+    width: 40%;
+    padding-left: 100px;
+}
+
+/* Responsif untuk layar kecil (mobile) */
+@media (max-width: 768px) {
+    .container-split {
+        height: 90px;
+        width: 100%;              /* lebar penuh */
+        padding: 0 0 0 60px;          /* padding horizontal nyaman */
+        font-size: 11px;          /* lebih mudah dibaca */
+        padding-left: 60px;          /* reset padding kiri */
+        text-align: left;         /* pastikan rata kiri */
+        align-items: flex-start;  /* jika pakai flex-child */
+        box-sizing: border-box;
+    }
+
+    .left-panel {
+        padding-left: 80px;          /* reset padding kiri */
+        text-align: left;         /* pastikan rata kiri */
+        align-items: flex-start;  /* jika pakai flex-child */
+        box-sizing: border-box;
+    }
+}
+
+.top-section {
+    flex: 1; /* bagian atas */
+    padding: 20px;
+}
+
+.bottom-section {
+    padding: 20px;
+    justify-content: flex-end;
+}
+
+
+.main-layout-contact {
+    display: flex;
+    width: 90%;
+}
+
+.right-contact {
+    background-color: transparent;
+    padding: 20px;
+    text-align: start;
+
+    font-family: 'Neue Montreal Mono', monospace;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    font-size: 12px;
+    line-height: 18px;
+
+    margin-left: auto;
+}
+
+.contact {
+    padding: 0px;
+    display: flex;
+    flex-direction: column;      /* Susun link ke bawah */
+    justify-content: flex-end;     /* Rata tengah secara vertikal (jika tinggi tersedia) */
+    align-items: flex-end;     /* Rata kiri secara horizontal */
+    padding-left: 0px;
+    white-space: nowrap;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Neue Montreal Mono', monospace;
+    font-size: 15px;
+    text-transform: lowercase;
+    transition: color 0.3s ease;
+    color: var(--text); /* Gunakan variabel, bukan warna tetap */
+}
+
+.contact a:hover {
+    color: gray;
+    color: var(--hover);
+}
+
+@media (max-width: 768px) {
+    .contact {
+        width: 100%;
+        align-items: flex-start;
+        margin-left: -130px;
+    }
+
+    .contact a {
+        font-size: 14px;
+        text-align: left;
+    }
+}
+
+@media (max-width: 400px) {
+    .contact {
+        width: 100%;
+        align-items: flex-start;
+        margin-left: -160px;
+    }
+}
+
+.right-faq {
+    width: 600px; /* atau 50%, 30vw, dll */
+    height: 100%;
+    background-color: transparent;
+    padding: 150px 0 20px 20px;  /* top right bottom left */
+    text-align: start;
+
+    font-family: 'Neue Montreal Mono', monospace;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: auto;
+}
+
+/* Main content */
+.main {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.main {
+    overflow-y: scroll; /* tetap scrollable */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.faq-section {
+    margin-bottom: 50px;
+    font-size: 23px;
+    margin-top: 100;
+}
+
+.faq-section h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.faq-section p {
+    font-size: 9px;
+}
+
+@media (max-width: 768px) {
+    .right-faq {
+        width: 100%;
+        padding: 20px 15px;
+        padding-top: 50px;
+        text-align: left;
+        font-size: 11px;
+        margin-left: -200px;
+        margin-top: 20px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .faq-section {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .faq-section h2 {
+        font-size: 16px;
+    }
+
+    .faq-section p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        display: flex;               /* Tambahkan display */
+        flex-direction: column;      /* Ubah orientasi jadi kolom */
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid #ddd;
+        padding: 10px 15px;
+        box-sizing: border-box;
+    }
+
+    .main {
+        padding: 10px 15px;
+        box-sizing: border-box;
+    }
+}
+
+/* Default light mode */
+:root {
+    --bg: #ffffff;
+    --text: #000000;
+}
+
+  /* Dark mode overrides */
+.dark {
+    --bg: #121212;
+    --text: #f5f5f5;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Posisi fleksibel di kiri bawah layar - responsive safe */
+.theme-toggle-container {
+    position: fixed;
+    bottom: 100px;
+    left: 48px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+    .theme-toggle-container {
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+/* ===========================
+   Vertical Text (Rotated)
+=========================== */
+.vertical-text {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: left top;
+    white-space: nowrap;
+    display: flex;
+    gap: 20px;
+
+    font-family: 'Crafter Dreams', sans-serif;
+    font-weight: 100;
+    font-size: clamp(10px, 2vw, 13px);
+    letter-spacing: 1px;
+}
+
+.vertical-text input[type="checkbox"] {
+    transform: scale(0.7);
+    margin-right: 2px;
+    cursor: pointer;
+}
+
+/* ===========================
+   Theme Copy Text (Bottom Left)
+=========================== */
+.theme-copy-container {
+    position: fixed;
+    bottom: 30px;
+    left: 70px;
+    z-index: 1000;
+
+    font-family: 'Crafter Dreams', sans-serif;
+    font-size: clamp(8px, 1.5vw, 12px);
+    letter-spacing: 1px;
+
+    background-color: var(--nav-bg);
+    color: var(--nav-text);
+    transition: background-color 0.3s, color 0.3s;
+
+    width: fit-content;
+    overflow: hidden;               /* potong jika konten terlalu tinggi */
+}
+
+/* ===========================
+   Responsive Adjustments
+=========================== */
+@media (max-width: 768px) {
+    .vertical-text {
+        position: fixed;
+        left: 3px;
+        top: auto;
+        bottom: 80px;
+        transform: rotate(-90deg) translateY(0);
+        font-size: 11px;
+        gap: 12px;
+    }
+
+    .theme-copy-container {
+        bottom: 30px;
+        left: 30px;
+    }
+}
+
+/* Dark mode color tetap */
+body.dark .theme-copy-container {
+    color: #ffffff;
+}
