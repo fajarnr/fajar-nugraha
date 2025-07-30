@@ -578,40 +578,40 @@ html::-webkit-scrollbar {
 }
 
 /* Main content */
-.main {
+.main-copycat {
     flex: 1;
     padding: 40px;
     overflow-y: auto;
 }
 
-.main {
+.main-copycat {
     overflow-y: scroll; /* tetap scrollable */
     scrollbar-width: none;
     -ms-overflow-style: none;
 }
 
-.main::-webkit-scrollbar {
+.main-copycat::-webkit-scrollbar {
     display: none;
 }
 
-.faq-section {
+.faq-section-copycat {
     margin-bottom: 50px;
     font-size: 23px;
     margin-top: 100;
 }
 
-.faq-section h2 {
+.faq-section-copycat h2 {
     font-size: 20px;
     margin-bottom: 5px;
     color: white;
 }
 
-.faq-section p {
+.faq-section-copycat p {
     font-size: 9px;
 }
 
 @media (max-width: 768px) {
-    .right-faq {
+    .right-copycat {
         width: 100%;
         padding: 20px 15px;
         padding-top: 50px;
@@ -621,21 +621,21 @@ html::-webkit-scrollbar {
         margin-top: 20px;
     }
 
-    .main {
+    .main-copycat {
         padding: 20px;
     }
 
-    .faq-section {
+    .faq-section-copycat {
         margin-top: 50px;
         margin-bottom: 30px;
         font-size: 16px;
     }
 
-    .faq-section h2 {
+    .faq-section-copycat h2 {
         font-size: 16px;
     }
 
-    .faq-section p {
+    .faq-section-copycat p {
         font-size: 11px;
         line-height: 1.6;
     }
