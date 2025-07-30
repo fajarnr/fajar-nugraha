@@ -55,3 +55,10 @@ Route::get('/faq', function () {
         'active' => 'faq'
     ]);
 });
+
+Route::get('/copycat', function () {
+    return view('copycat', [
+        "tittle" => 'copycat',
+        'active' => 'copycat'
+    ]);
+});

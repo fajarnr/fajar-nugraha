@@ -559,6 +559,88 @@ html::-webkit-scrollbar {
     }
 }
 
+.right-copycat {
+    width: 600px; /* atau 50%, 30vw, dll */
+    height: 100%;
+    background-color: transparent;
+    padding: 150px 0 20px 20px;  /* top right bottom left */
+    text-align: start;
+
+    font-family: 'Neue Montreal Mono', monospace;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    font-size: 20px;
+    margin-top: 30px;
+    margin-left: auto;
+}
+
+/* Main content */
+.main {
+    flex: 1;
+    padding: 40px;
+    overflow-y: auto;
+}
+
+.main {
+    overflow-y: scroll; /* tetap scrollable */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.main::-webkit-scrollbar {
+    display: none;
+}
+
+.faq-section {
+    margin-bottom: 50px;
+    font-size: 23px;
+    margin-top: 100;
+}
+
+.faq-section h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.faq-section p {
+    font-size: 9px;
+}
+
+@media (max-width: 768px) {
+    .right-faq {
+        width: 100%;
+        padding: 20px 15px;
+        padding-top: 50px;
+        text-align: left;
+        font-size: 11px;
+        margin-left: -200px;
+        margin-top: 20px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .faq-section {
+        margin-top: 50px;
+        margin-bottom: 30px;
+        font-size: 16px;
+    }
+
+    .faq-section h2 {
+        font-size: 16px;
+    }
+
+    .faq-section p {
+        font-size: 11px;
+        line-height: 1.6;
+    }
+}
+
 @media (max-width: 768px) {
     body {
         display: flex;               /* Tambahkan display */
