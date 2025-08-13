@@ -493,6 +493,7 @@ html::-webkit-scrollbar {
     font-size: 20px;
     margin-top: 30px;
     margin-left: auto;
+    margin-right: 30px;
 }
 
 /* Main content */
@@ -516,6 +517,7 @@ html::-webkit-scrollbar {
     margin-bottom: 50px;
     font-size: 23px;
     margin-top: 100;
+    margin-bottom: 20px;
 }
 
 .faq-section h2 {
@@ -537,6 +539,7 @@ html::-webkit-scrollbar {
         font-size: 11px;
         margin-left: -200px;
         margin-top: 20px;
+        margin-right: 10px;
     }
 
     .main {
@@ -575,6 +578,7 @@ html::-webkit-scrollbar {
     font-size: 20px;
     margin-top: 30px;
     margin-left: auto;
+    margin-right: 30px;
 }
 
 /* Main content */
@@ -594,19 +598,18 @@ html::-webkit-scrollbar {
     display: none;
 }
 
-.faq-section-copycat {
+.section-copycat {
     margin-bottom: 50px;
     font-size: 23px;
     margin-top: 100;
+    margin-bottom: 20px;    
 }
 
-.faq-section-copycat h2 {
-    font-size: 20px;
-    margin-bottom: 5px;
-    color: white;
+.section-copycat h6 {
+    font-size: 15px;
 }
 
-.faq-section-copycat p {
+.section-copycat p {
     font-size: 9px;
 }
 
@@ -625,17 +628,17 @@ html::-webkit-scrollbar {
         padding: 20px;
     }
 
-    .faq-section-copycat {
-        margin-top: 50px;
-        margin-bottom: 30px;
+    .section-copycat {
+        margin-top: 50px !important;
+        margin-bottom: 5px !important; 
         font-size: 16px;
     }
 
-    .faq-section-copycat h2 {
+    .section-copycat h2 {
         font-size: 16px;
     }
 
-    .faq-section-copycat p {
+    .section-copycat p {
         font-size: 11px;
         line-height: 1.6;
     }
